@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(sessionStorage.getItem('dko_booted')){document.documentElement.classList.add('dko-skip-boot');}}catch(e){}</script>
+<title>DeathKO Prime XL — Yayıncı &amp; İçerik Üretici Programı</title>
+<meta name="description" content="DeathKO'nun yeni PvP sunucusu Prime XL için yayıncı ve içerik üretici başvuru programı.">
+<link rel="icon" href="assets/prime.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400&amp;family=Space+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
+<div class="boot-overlay" id="bootOverlay" aria-hidden="true">
+  <div class="boot-lines" id="bootLines">
+    <div class="boot-line" data-text="deathko_prime_xl.sys başlatılıyor...">&gt; </div>
+    <div class="boot-line" data-text="yayıncı_programı.dll yükleniyor... OK">&gt; </div>
+    <div class="boot-line" data-text="sunucu_bağlantısı doğrulanıyor... OK">&gt; </div>
+    <div class="boot-line" data-text="sahne hazırlanıyor">&gt; </div>
+  </div>
+  <span class="boot-skip">herhangi bir tuşa bas — geç</span>
+</div>
+<div class="site-scope">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand brand-premium" href="index.html">
+      <img src="assets/deathko-crop.png" alt="DeathKO Prime XL">
+    </a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="program.html">Program</a>
+      <a href="kriterler.html">Kriterler</a>
+      <a href="surec.html">Süreç</a>
+      <a href="basvuru.html" class="btn btn-primary btn-small nav-cta-mobile">Başvuru Formu</a>
+    </nav>
+    <div class="header-actions">
+      <a href="basvuru.html" class="btn btn-ghost btn-small">Başvuru Formu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1 class="hero-tagline">Sahne senin.</h1>
+    <p class="hero-sub">Yayıncı &amp; İçerik Üretici Programı</p>
+    <p class="hero-lead">Prime XL kapılarını açıyor. Oynayan, anlatan ve duyuran yayıncılar arıyoruz.</p>
+    <div class="hero-object">
+      <img class="hero-logo" src="assets/prime-crop.png" alt="Prime XL">
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">// program</span>
+      <h2>Bu bir reklam değil, bir ortaklık</h2>
+      <p>Prime XL için yayıncı ve içerik üretici arıyoruz: lansmandan önce bir tanıtım videosuyla sahneyi duyuracak, açılıştan sonra ise sahada oynayıp içerik üretecek ve kendi kitlesine taşıyacak isimlerle çalışıyoruz. Sadece "yayın açan" değil, sahneyi büyüten; YouTube, Kick, Instagram veya Facebook'ta aktif ve düzenli bir geçmişi olan isimlerle çalışıyoruz. Başvurudan katılıma kadar dört adımlık, şeffaf bir değerlendirme süreci işletiyoruz.</p>
+      <div class="hero-cta">
+        <a href="program.html" class="btn btn-primary btn-large">Programı İncele <span class="chevron">›</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer reveal">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="program.html">Program</a>
+      <a href="kriterler.html">Kriterler</a>
+      <a href="surec.html">Süreç</a>
+      <a href="basvuru.html">Başvuru Formu</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+      <a href="#" aria-label="Kick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DeathKO — Prime XL Yayıncı Programı</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="fx.js"></script>
+</div>
+</body>
+</html>

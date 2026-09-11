@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{if(sessionStorage.getItem('dko_booted')){document.documentElement.classList.add('dko-skip-boot');}}catch(e){}</script>
+<title>Program — DeathKO Prime XL Yayıncı Programı</title>
+<meta name="description" content="DeathKO Prime XL yayıncı ve içerik üretici programı hakkında genel bilgi.">
+<link rel="icon" href="assets/prime.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400&amp;family=Space+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
+<div class="boot-overlay" id="bootOverlay" aria-hidden="true">
+  <div class="boot-lines" id="bootLines">
+    <div class="boot-line" data-text="deathko_prime_xl.sys başlatılıyor...">&gt; </div>
+    <div class="boot-line" data-text="yayıncı_programı.dll yükleniyor... OK">&gt; </div>
+    <div class="boot-line" data-text="sunucu_bağlantısı doğrulanıyor... OK">&gt; </div>
+    <div class="boot-line" data-text="sahne hazırlanıyor">&gt; </div>
+  </div>
+  <span class="boot-skip">herhangi bir tuşa bas — geç</span>
+</div>
+<div class="site-scope">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/deathko-crop.png" alt="DeathKO Prime XL">
+    </a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="program.html" aria-current="page">Program</a>
+      <a href="kriterler.html">Kriterler</a>
+      <a href="surec.html">Süreç</a>
+      <a href="basvuru.html" class="btn btn-primary btn-small nav-cta-mobile">Başvuru Formu</a>
+    </nav>
+    <div class="header-actions">
+      <a href="basvuru.html" class="btn btn-ghost btn-small">Başvuru Formu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">// program</p>
+    <h1>Bu bir reklam değil, bir ortaklık</h1>
+    <p>Bu işi gerçekten severek yapacak, içeriklerine ve yayınlarına özen gösterecek; oyunu her yönüyle anlatabilecek, sunucumuzu sahiplenip kendi kitlesine kendi jargonunda taşıyabilecek yayıncı ve içerik üreticiler arıyoruz.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">// odaklandığımız platformlar</span>
+    </div>
+    <div class="term-panel term-panel-premium reveal-stagger">
+      <div class="term-row">
+        <span class="icon icon-youtube"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg></span>
+        <div class="body"><h3>YouTube</h3></div>
+        <span class="role">içerik arşivi / geniş erişim / Shorts</span>
+      </div>
+      <div class="term-row">
+        <span class="icon icon-kick"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></span>
+        <div class="body"><h3>Kick</h3></div>
+        <span class="role">canlı yayın / topluluk / Clips</span>
+      </div>
+      <div class="term-row">
+        <span class="icon icon-instagram"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.9 5.9 0 0 0-2.124 1.388a5.9 5.9 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076s-.069 1.688-.063 4.947s.021 3.667.083 4.947c.061 1.277.264 2.149.563 2.911c.308.789.72 1.457 1.388 2.123a5.9 5.9 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552c1.278.056 1.689.069 4.947.063s3.668-.021 4.947-.082c1.28-.06 2.147-.265 2.91-.563a5.9 5.9 0 0 0 2.123-1.388a5.9 5.9 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912c.056-1.28.07-1.69.063-4.948c-.006-3.258-.02-3.667-.081-4.947c-.06-1.28-.264-2.148-.564-2.911a5.9 5.9 0 0 0-1.387-2.123a5.9 5.9 0 0 0-2.128-1.38c-.764-.294-1.636-.496-2.914-.55C15.647.009 15.236-.006 11.977 0S8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.7 3.7 0 0 1-1.382-.895a3.7 3.7 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228c-.06-1.264-.072-1.644-.08-4.848c-.006-3.204.006-3.583.061-4.848c.05-1.169.246-1.805.408-2.228c.216-.561.477-.96.895-1.382a3.7 3.7 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417c1.265-.06 1.644-.072 4.848-.08c3.203-.006 3.583.006 4.85.062c1.168.05 1.804.244 2.227.408c.56.216.96.475 1.382.895s.681.817.9 1.378c.165.422.362 1.056.417 2.227c.06 1.265.074 1.645.08 4.848c.005 3.203-.006 3.583-.061 4.848c-.051 1.17-.245 1.805-.408 2.23c-.216.56-.477.96-.896 1.38a3.7 3.7 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418c-1.266.06-1.645.072-4.85.079s-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442a1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024a6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16A4 4 0 0 1 8 12.008"/></svg></span>
+        <div class="body"><h3>Instagram</h3></div>
+        <span class="role">kısa içerik / duyuru / Reels</span>
+      </div>
+      <div class="term-row">
+        <span class="icon icon-facebook"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978c.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036a27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103l-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg></span>
+        <div class="body"><h3>Facebook</h3></div>
+        <span class="role">topluluk / geniş kitle / Reels</span>
+      </div>
+    </div>
+    <div class="cta-row reveal">
+      <a href="kriterler.html" class="btn btn-primary btn-large">Kriterleri Gör</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer reveal">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="program.html">Program</a>
+      <a href="kriterler.html">Kriterler</a>
+      <a href="surec.html">Süreç</a>
+      <a href="basvuru.html">Başvuru Formu</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+      <a href="#" aria-label="Kick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DeathKO — Prime XL Yayıncı Programı</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="fx.js"></script>
+</div>
+</body>
+</html>
